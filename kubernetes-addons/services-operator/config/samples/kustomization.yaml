@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- oso_v1alpha3_serviceoperator.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

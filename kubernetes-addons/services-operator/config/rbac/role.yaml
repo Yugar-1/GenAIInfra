@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - oso.opea.io
+  resources:
+  - serviceoperators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - oso.opea.io
+  resources:
+  - serviceoperators/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - oso.opea.io
+  resources:
+  - serviceoperators/status
+  verbs:
+  - get
+  - patch
+  - update
